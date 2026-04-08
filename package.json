@@ -1,0 +1,14 @@
+{
+  "name": "portfolio_simple",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "venkat",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.99.0"
+  }
+}

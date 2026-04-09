@@ -27,3 +27,15 @@ clickers.forEach((ele, index) => {
     });
 });
 
+
+
+//Email functionality
+
+function sendMail(){
+    let params = {
+        name : document.getElementById('name').value,
+        email : document.getElementById('email').value,
+        msg : document.getElementById('msg').value,
+    }
+    emailjs.send("service_u0svbfv", "template_bs3le37", params).then(alert('Thanks for you Email, I will be back with you within No time'))
+}

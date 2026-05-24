@@ -1,0 +1,100 @@
+/* ===== Modern CSS Reset ===== */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Improve text rendering */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  & :hover{
+    cursor: pointer;
+  }
+}
+
+/* Make images responsive */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove default form styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Avoid text overflow */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+form,
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  box-sizing: border-box;
+}

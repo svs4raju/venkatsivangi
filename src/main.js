@@ -1,5 +1,4 @@
-// Import styling sheet
-import './style.css';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize current year in footer

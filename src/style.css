@@ -1273,3 +1273,10 @@ body.light-theme .theme-toggle-btn:hover {
 .gradient-emerald {
   background: var(--gradient-emerald);
 }
+
+
+/* Weather styles */
+.weather{
+  display: flex;
+  flex-direction: column;
+}

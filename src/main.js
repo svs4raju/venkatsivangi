@@ -227,3 +227,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+
+/* ==========================================================================
+     Temparature API
+     ========================================================================== */
+
+const api = "https://api.openweathermap.org/data/2.5/weather?q=hyderabad,IN&appid=7a6135fcc4838380a6391e479c674890&units=metric";
+
+const tempEl = document.querySelector('.temp');
+const cityEl = document.querySelector('.city');
+
+const responseWhether = async function(){
+    const data = await fetch(api);
+    const result = await data.json();  
+    console.log(result);
+
+    const icon = document.createElement('i');
+
+    if (result.weather[0].main == "Clouds") {
+      icon.className = 'fa-solid fa-cloud';
+    } else if (result.weather[0].main === "Clear") {
+      icon.className = 'fa-solid fa-sun';
+    } else if (result.weather[0].main === "Rain") {
+      icon.className = 'fa-solid fa-rain';
+    } else if (result.weather[0].main === "Snow") {
+      icon.className = 'fa-solid fa-snowflake';
+    } else {
+      icon.className = 'fa-solid fa-meteor';
+    }
+
+    tempEl.innerHTML = `${result.main.temp} &deg;C `;
+    tempEl.appendChild(icon);
+    cityEl.innerHTML = `${result.name}`;
+}
+
+responseWhether();
